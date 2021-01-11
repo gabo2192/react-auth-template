@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Layout } from "./componens/layout";
+import { SignIn } from "./componens/sign-in";
+import { SignUp } from "./componens/sign-up";
+import { ResetPassword } from "./componens/reset-password";
+import { PasswordConfirmation } from "./componens/password-confirmation";
+import { ProtectedRoute } from "./componens/protected-route";
+import { AuthProvider } from "./context/auth-context";
+import { EmailConfirmation } from "./componens/email-confirmation";
+
+function Home() {
+  return <div>Hello Jude</div>;
 }
 
-export default App;
+export default function App() {
+  return (
+    <ChakraProvider>
+      <AuthProvider>
+        <Router>
+          <Layout>
+            <Switch>
+              <Route path="/email-confirmation" component={EmailConfirmation} />
+              <Route
+                path="/password-confirmation"
+                component={PasswordConfirmation}
+              />
+              <Route path="/reset-password" component={ResetPassword} />
+              <Route path="/signin" component={SignIn} />
+              <Route path="/signup" component={SignUp} />
+              <ProtectedRoute path="/" component={Home} />
+            </Switch>
+          </Layout>
+        </Router>
+      </AuthProvider>
+    </ChakraProvider>
+  );
+}
