@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 
-import { Layout } from "./componens/layout";
-import { SignIn } from "./componens/sign-in";
-import { SignUp } from "./componens/sign-up";
-import { ResetPassword } from "./componens/reset-password";
-import { PasswordConfirmation } from "./componens/password-confirmation";
-import { ProtectedRoute } from "./componens/protected-route";
+import { Layout } from "./components/layout";
+import { SignIn } from "./components/sign-in";
+import { SignUp } from "./components/sign-up";
+import { ResetPassword } from "./components/reset-password";
+import { PasswordConfirmation } from "./components/password-confirmation";
+import { ProtectedRoute } from "./components/protected-route";
 import { AuthProvider } from "./context/auth-context";
-import { EmailConfirmation } from "./componens/email-confirmation";
+import { EmailConfirmation } from "./components/email-confirmation";
 
 function Home() {
   return <div>Hello Jude</div>;

@@ -49,6 +49,7 @@ export function SignIn() {
           onClick={(event) => setPassword(event.target.value)}
         />
       </FormControl>
+      <Link to="/reset-password">Forgot Password?</Link>
       <Box
         display="flex"
         justifyContent="space-around"

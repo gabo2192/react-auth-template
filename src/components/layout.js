@@ -1,6 +1,6 @@
 import { Box, Button, Heading } from "@chakra-ui/react";
 import { useContext } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { AuthContext } from "../context/auth-context";
 
 export function Layout({ children }) {
@@ -18,7 +18,9 @@ export function Layout({ children }) {
         justifyContent="space-around"
         padding={2}
       >
-        <Heading as="h1">Auth</Heading>
+        <Link to="/">
+          <Heading as="h1">Auth</Heading>
+        </Link>
         <Button
           onClick={() => {
             isAuthenticated ? logout() : history.push("/signin");

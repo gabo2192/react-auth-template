@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
   FormControl,
   FormLabel,
@@ -17,11 +17,12 @@ export function SignUp() {
   const [name, setName] = useState(null);
   const [phone, setPhone] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
+  const history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log({ email, password, name, phone });
-    history.pushState('/email-confirmation')
+    history.pushState("/email-confirmation");
   };
   return (
     <Box
