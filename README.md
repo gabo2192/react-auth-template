@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [Chakra UI](https://chakra-ui.com/)
 
+## To Fix
+
+- At time of creation Chakra UI need to be fixed at version 1.1.2.
+
 ## Available Scripts
 
 In the project directory, you can run:
