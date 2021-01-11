@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## To Fix
 
-- At time of creation Chakra UI need to be fixed at version 1.1.2.
+- At time of creation Chakra UI needed to be fixed at version 1.1.2.
 
 ## Available Scripts
 
